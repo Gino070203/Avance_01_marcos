@@ -1,0 +1,209 @@
+/* :root define "Variables CSS" que guardan los colores principales para usarlos fácilmente después */
+:root {
+    --chalet-brown: #7E6354;
+    /* Color café principal */
+    --chalet-hover: #614a3e;
+    /* Color café más oscuro para cuando el mouse pasa por encima */
+    --chalet-text: #4a4a4a;
+    /* Color del texto general */
+    --bg-body: #ffffff;
+    --bg-header:#988a83;
+}
+
+/* Estilos generales del cuerpo de la página */
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: var(--chalet-text);
+    background-color: var(--bg-body);
+}
+
+.navbar{
+    background-color: var(--bg-header);
+}
+
+/* Estilo para el título principal de la página */
+.section-title {
+    color: var(--chalet-brown);
+    font-weight: 300;
+    letter-spacing: 2px;
+    /* Espacio entre letras para darle un toque elegante */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+h3,h4{
+    color: var(--chalet-brown);
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* DISEÑO DE LA TABLA */
+.table-chalet {
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    /* Bordes redondeados */
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    /* Sombra suave para dar profundidad */
+}
+
+/* Encabezado de la tabla */
+.table-chalet thead {
+    background-color: var(--chalet-brown);
+    color: #ffffff;
+}
+
+/* Celdas del encabezado */
+.table-chalet th {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    padding: 18px 15px;
+    border: none;
+}
+
+/* Celdas del cuerpo de la tabla */
+.table-chalet td {
+    vertical-align: middle;
+    padding: 16px 15px;
+    color: var(--chalet-text);
+    border-bottom: 1px solid #eaeaea;
+    /* Línea separadora entre filas */
+}
+
+/* Efecto cebra: cambia el fondo de las filas impares para facilitar la lectura */
+.table-chalet tbody tr:nth-of-type(odd) {
+    background-color: #fcfcfc;
+}
+
+/* Efecto al pasar el mouse sobre una fila de la tabla */
+.table-chalet tbody tr:hover {
+    background-color: #f5f0ed;
+}
+
+/* Estilo específico para el nombre de la habitación */
+.room-name {
+    font-weight: 600;
+    color: var(--chalet-brown);
+    font-size: 1.1rem;
+}
+
+/* DISEÑO DEL BOTÓN "RESERVAR" */
+.btn-chalet {
+    background-color: var(--chalet-brown);
+    color: white;
+    border: none;
+    border-radius: 2px;
+    padding: 10px 24px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    /* Animación suave al hacer hover */
+}
+
+.btn-chalet:hover {
+    background-color: var(--chalet-hover);
+    color: white;
+    box-shadow: 0 4px 8px rgba(126, 99, 84, 0.3);
+}
+
+/* ESTILOS DEL MODAL (Ventana emergente) */
+.modal-header-chalet {
+    border-bottom: 2px solid var(--chalet-brown);
+}
+
+.modal-title {
+    color: var(--chalet-brown);
+    font-weight: 600;
+}
+
+/* Color del borde cuando haces clic en un campo de texto/fecha */
+.form-control:focus {
+    border-color: var(--chalet-brown);
+    box-shadow: 0 0 0 0.25rem rgba(126, 99, 84, 0.25);
+}
+
+
+.info {
+    background: #5c4a41;
+    color: white;
+    min-height: 100%;
+}
+
+.info h2 {
+    font-size: 35px;
+    letter-spacing: 2px;
+}
+
+.titulo {
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 25px;
+}
+
+.info h4 {
+    margin-top: 40px;
+    font-size: 22px;
+}
+
+/* Lado derecho */
+.formulario {
+    background: #f2efed;
+}
+
+/* Títulos */
+.formulario h4 {
+    letter-spacing: 2px;
+    color: #8a7f78;
+}
+
+.formulario h1 {
+    color: #5c4a41;
+    font-weight: bold;
+}
+
+/* Inputs */
+input,
+textarea {
+    background: #e9e6e4 !important;
+    border: none !important;
+}
+
+input:focus,
+textarea:focus {
+    background: #dedad7 !important;
+    box-shadow: none !important;
+}
+
+/* Botón */
+button {
+    background: #5c4a41 !important;
+    border: none !important;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #4a3b34 !important;
+}
+
+/* Modal */
+.modal-header {
+    background: #5c4a41;
+    color: white;
+}
+
+/* Responsive */
+@media(max-width:768px) {
+
+    .info {
+        text-align: center;
+    }
+
+}
