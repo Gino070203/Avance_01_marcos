@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./styles/styles.css">
+  
+
+</head>
+
+
+<body>
+
+    
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+      
+          <!-- Logo / Nombre del sistema -->
+          <a class="navbar-brand fw-bold" href="#">🏨 HotelGestión</a>
+      
+          <!-- Botón hamburguesa (visible en móviles) -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <!-- Menú colapsable -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <!-- ms-auto empuja el menú a la derecha -->
+      
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Inicio</a>
+              </li>
+      
+              <li class="nav-item">
+                <a class="nav-link" href="#">Habitaciones</a>
+              </li>
+      
+              <li class="nav-item">
+                <a class="nav-link" href="#">Reservas</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+
+    <!-- 
+    
+    container-fluid : significa que ocupara todo el ancho de pantalla
+    -->
+
+    <div class="container-fluid">
+
+        <img src="./assets/imgs/heroImage.avif  " alt="" width="100%">
+
+    </div>
+
+
+    <!-- 
+    ====Seccion de features====
+    container : ofrece un ancho adaptable,según el tamaño de la pantalla 
+    -->
+
+     <div class="container">
+
+        <h3 class="text-center mt-3">Nuestros servicios</h3>
+        
+        <!--
+        row : agrupa columnas y las organiza horizontalmente
+        g-3: permite la separacion entre los div "hijos"
+        -->
+        <div class="row g-3 mt-3">          
+
+            <!--
+            col : ayuda a definir columnas responsive
+            col-12 : significa que para pantallas con un ancho menor de 576px, ocupara el total del ancho del contenedor padre
+            col-md-6 : significa que para pantallas con un ancho de 768px o más, ocupara la mitad del ancho del contenedor padre
+            col-lg-3 : significa que para pantallas con un ancho de 992px o más, ocupara la tercera parte del ancho del contenedor padre
+            -->
+
+            <div class="col-12 col-md-6 col-lg-3" >
+                
+                <!--
+                card : contendor flexible con estilos predefinidos, como padding interno y borde
+                h-100 : es equivalente a decir heigth 100%, colocado con el fin para que todos midan los mismo
+                text-center : Permite centrar todo el contenido de la card
+                -->
+                
+                <div class="card h-100 text-center">    
+
+                    <img src="./assets/imgs/serviceRoom.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Servicio de habitaciones</h5>
+                      <p class="card-text">Disfruta del máximo confort sin salir de tu habitación. Te llevamos lo que necesites, rápido y directo a tu puerta.</p>
+                    </div>
+                </div>
+
+            </div>          
+
+            <div class="col-12 col-md-6 col-lg-3" >
+                <div class="card h-100" >
+                    <img src="./assets/imgs/LagugageStore.webp" class="card-img-top object-fit-cover" alt="..." height="200">
+                    <div class="card-body">
+                      <h5 class="card-title">Servicio de equipaciones</h5>
+                      <p class="card-text">Guarda tu equipaje de forma segura mientras disfrutas tu estadía sin preocupaciones.</p>
+                      
+                    </div>
+                </div>
+            </div>          
+            
+            <div class="col-12 col-md-6 col-lg-3" >
+                <div class="card h-100" >
+                    <img src="./assets/imgs/HotelComfort.jpg" class="card-img-top" alt="..." >
+                    <div class="card-body">
+                      <h5 class="card-title">Habitaciones comodas</h5>
+                      <p class="card-text">Relájate en espacios diseñados para tu descanso, con camas cómodas y un ambiente acogedor que te hará sentir como en casa.</p>
+                      
+                    </div>
+                </div>
+            </div>          
+
+            <div class="col-12 col-md-6 col-lg-3" >
+                <div class="card h-100" >
+                    <img src="./assets/imgs/reception24Hrs.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Excelente atencion al cliente</h5>
+                      <p class="card-text">Personal capacitado, totalmente atentos para ofrecerte una buena experiencia en el hotel.</p>
+                      
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- tabla -->
+
+    <div class="container mt-5 mb-5"> 
+        <div class="text-center">
+            <h2 class="section-title">Comparativa de Habitaciones</h2>
+        </div>
+    
+        <div class="table-responsive"> 
+            <table class="table table-chalet text-center align-middle">
+                <thead>
+                    <tr>
+                        <th class="text-start">Tipo de Habitación</th>
+                        <th>Capacidad</th>
+                        <th>Cama</th>
+                        <th>Tamaño</th>
+                        <th>Precio</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-start room-name">Estándar</td>
+                        <td>2 Personas</td>
+                        <td>1 Queen</td>
+                        <td>25 m²</td>
+                        <td>s/ 108 x noche</td>
+                        <td><button class="btn-chalet open-modal-btn" data-bs-toggle="modal" data-bs-target="#modalReserva" data-room="Estándar">Reservar</button></td>
+                    </tr>
+                    <tr>
+                        <td class="text-start room-name">Deluxe Chalet</td>
+                        <td>2 Personas</td>
+                        <td>1 King + 1 Sofá</td>
+                        <td>40 m²</td>
+                        <td>s/ 216 x noche</td>
+                        <td><button class="btn-chalet open-modal-btn" data-bs-toggle="modal" data-bs-target="#modalReserva" data-room="Deluxe Chalet">Reservar</button></td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-start room-name">Familiar</td>
+                        <td>4 Personas</td>
+                        <td>2 Queen + 1 Sofá</td>
+                        <td>50 m²</td>
+                        <td>s/ 440 x noche</td>
+                        <td><button class="btn-chalet open-modal-btn" data-bs-toggle="modal" data-bs-target="#modalReserva" data-room="Deluxe Chalet">Reservar</button></td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-start room-name">Suite Presidencial</td>
+                        <td>4 Personas</td>
+                        <td>2 King</td>
+                        <td>80 m²</td>
+                        <td>s/ 800 x noche</td>
+                        <td><button class="btn-chalet open-modal-btn" data-bs-toggle="modal" data-bs-target="#modalReserva" data-room="Suite Presidencial">Reservar</button></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal de la tabla -->
+    <div class="modal fade" id="modalReserva" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered"> 
+            <div class="modal-content">
+            
+                <div class="modal-header modal-header-chalet">
+                    <h5 class="modal-title">Reservar <span id="nombreHabitacionModal"></span></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            
+                <div class="modal-body p-4">
+            
+                    <div id="pasoFecha">
+                        <label for="fechaReserva" class="form-label fw-bold">Seleccione la fecha de llegada:</label>
+                        <input type="date" id="fechaReserva" class="form-control mb-3" min="2026-04-12" max="2026-12-31">
+                        <button id="btnAceptarFecha" class="btn-chalet w-100">Aceptar Fecha</button> 
+                    </div>
+    
+                    <div id="pasoDias" style="display: none;">
+                        <label for="diasReserva" class="form-label fw-bold">¿Cuántos días se hospedará?</label>
+                        <input type="number" id="diasReserva" class="form-control mb-3" min="1" max="7" value="1">
+                        <small class="text-muted d-block mb-3">Máximo 7 días permitidos.</small>
+                        <button id="btnConfirmarReserva" class="btn-chalet w-100">Confirmar Reserva</button>
+                    </div>
+    
+                    <div id="pasoExito" style="display: none;" class="text-center py-3">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="var(--chalet-brown)" class="bi bi-check-circle mb-3" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                            <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                        </svg>
+
+                        <h5 id="mensajeFinal" style="color: var(--chalet-brown);"></h5>
+
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 
+    ==== Uso de img-fluid ====
+    -->
+
+    <div class="container">
+
+        <h3 class="text-center mt-3">Algunas de nuestras habitaciones</h3>
+
+
+        <div class="row">
+
+            <!--
+            col : ayuda a definir columnas responsive
+            col-12 : significa que para pantallas con un ancho menor de 576px, ocupara el total del ancho del contenedor padre
+            col-md-12 : significa que para pantallas con un ancho de 768px o más, ocupara el total del ancho del contenedor padre,
+            esto con el fin de que el usuario pueda visualizar mejor la imagen de la habitacion
+            col-lg-6 : significa que para pantallas con un ancho de 992px o más, ocupara la mitad del ancho del contenedor padre
+            -->
+
+
+            <div class="col-12 col-md-12 col-lg-6">
+
+                <!-- 
+                img-fluid : Adapta de manera automatica el alto de la imagen, asimismo tiene por defecto width 100% 
+                mt-5 : equivalente a un margin top
+                -->
+
+                <img src="./assets/imgs/roomSimple.jpg" class="img-fluid mt-5" alt="...">    
+
+
+                <!--
+                d-flex : utiliza flexbox, es lo mismo que display:flex
+                justify-content-between : en el eje principal los "childs" estaran separados en los extremos
+                align-items-center : En el eje secundario los "childs" estaran centrados
+                flex-wrap : Permite que un elemento dentro del contenedor, salte de linea si no hay más espacio
+                -->
+
+                <div class="d-flex justify-content-between align-items-center flex-wrap" >
+    
+                    <!-- 
+                    d-flex : utiliza flexbox, es lo mismo que display:flex
+                    align-items-center : En el eje secundario los "childs" estaran centrados
+                    gap-1 : permite la separacion entre los elementos contenidos
+                    -->
+
+                    <div class="d-flex align-items-center gap-1" >
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-users"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 7a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /><path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></svg>
+                        <p class="mb-0 text-nowrap">2 personas</p>
+                    </div>
+                
+                    <!-- 
+                    mb-0 : equivalente a margin bottom, no existe margen de separacion solo en la parte inferior
+                    -->
+                    <p class="mb-0">s/. 108 x noche</p>
+                
+                </div>
+
+                <h4>Habitacion estandar</h4>
+
+            </div>
+
+            <div class="col-12 col-md-12 col-lg-6">
+
+                <img src="./assets/imgs/roomSuperior.jpg" class="img-fluid mt-5" alt="...">    
+
+                <div class="d-flex justify-content-between align-items-center flex-wrap" >
+    
+                    <div class="d-flex align-items-center gap-1">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-users"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 7a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /><path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></svg>
+                        <p class="mb-0 text-nowrap">2 personas</p>
+                    </div>
+                
+                    <p class="mb-0">s/. 216 x noche</p>
+                
+                </div>
+
+                <h4 >Deluxe chalet</h4>
+
+            </div>
+
+            <div class="col-12 col-md-12 col-lg-6">
+
+                <img src="./assets/imgs/roomFamiliar.jpg" class="img-fluid mt-5" alt="...">    
+
+                <div class="d-flex justify-content-between align-items-center flex-wrap" >
+    
+                    <div class="d-flex align-items-center gap-1" >
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-users"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 7a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /><path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></svg>
+                        <p class="mb-0 text-nowrap">4 personas</p>
+                    </div>
+                
+                    <p class="mb-0">s/. 440 x noche</p>
+                
+                </div>
+
+                <h4 >Familiar</h4>
+
+            </div>
+
+            <div class="col-12 col-md-12 col-lg-6">
+
+                <img src="./assets/imgs/roomSuite.avif" class="img-fluid mt-5" alt="...">    
+
+                <div class="d-flex justify-content-between align-items-center flex-wrap" >
+    
+                    <div class="d-flex align-items-center gap-1" >
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-users"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 7a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /><path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></svg>
+                        <p class="mb-0 text-nowrap">4 personas</p>
+                    </div>
+                
+                    <p class="mb-0">s/. 800 x noche</p>
+                
+                </div>
+
+                <h4 >Suite</h4>
+
+            </div>
+
+            
+        </div>
+
+    </div>
+
+
+    <!-- Codigo erick -->
+
+
+    <div class="container my-5 shadow rounded overflow-hidden">
+
+        <div class="row g-0">
+        
+        <!-- Lado izquierdo -->
+        <div class="col-md-4 info text-white p-4">
+        
+        <h2 class="fw-bold text-uppercase mb-4">
+        Nuestros <br> Horarios
+        </h2>
+        
+        <p class="text-warning fw-bold mt-3">LUNES - JUEVES</p>
+        <p class="mb-1">07:00 - 15:00</p>
+        <p class="mb-3">16:00 - 22:00</p>
+        
+        <p class="text-warning fw-bold">VIERNES - DOMINGO</p>
+        <p class="mb-1">07:00 - 15:00</p>
+        <p class="mb-3">16:00 - 22:00</p>
+        
+        <h4 class="mt-4 fw-bold text-white">
+        +51 987 654 321
+        </h4>
+        
+        </div>
+        
+        <!-- Formulario -->
+        <div class="col-md-8 bg-white p-5">
+        
+        <h4 class="text-center text-secondary mb-2">
+        CONTACTANOS !!!
+        </h4>
+        
+        <h1 class="text-center mb-4">
+        Reserva tu habitación
+        </h1>
+        
+        <form id="formulario" class="needs-validation" novalidate>
+        
+        <div class="mb-3">
+
+                <input 
+            class="form-control mb-3 rounded shadow-sm"
+            type="text" 
+            placeholder="Nombre" 
+            id="nombre"
+            pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]+" 
+            required>
+            
+            <div class="invalid-feedback">
+            Complete este campo (solo letras)
+            </div>
+
+
+        </div>
+
+        
+        <div class="mb-3">
+            <input 
+            class="form-control mb-3 rounded shadow-sm"
+            type="text" 
+            placeholder="Apellido" 
+            id="apellido"
+            pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]+" 
+            required
+            >
+            
+            <div class="invalid-feedback">
+            Complete este campo (solo letras)
+            </div>
+        </div>
+        
+        <div class="mb-3">
+            <input 
+            class="form-control mb-3 rounded shadow-sm"
+            type="email" 
+            placeholder="Email" 
+            id="correo" 
+            required>
+            
+            <div class="invalid-feedback">
+            Ingrese un correo válido
+            </div>
+        </div>
+        
+        <div class="mb-3">
+            <input 
+            class="form-control mb-3 rounded shadow-sm"
+            placeholder="Teléfono" 
+            type="tel" 
+            id="telefono"
+            class="form-control"
+            pattern="[0-9+ ]{9,15}" 
+            required
+            >
+            
+            <div class="invalid-feedback">
+            Solo números
+            </div>
+        </div>
+
+        
+        
+        <textarea 
+        class="form-control mb-3 rounded shadow-sm"
+        placeholder="Mensaje (Opcional)"
+        id="mensaje">
+        </textarea>
+        
+        <button 
+        class="btn btn-dark w-100 p-3 rounded shadow"
+        type="submit">
+        Enviar Reserva
+        </button>
+        
+        </form>
+        
+        </div>
+        
+        </div>
+        
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="modalFormulario" tabindex="-1">
+        <div class="modal-dialog">
+        <div class="modal-content">
+        
+        <div class="modal-header">
+        <h5 class="modal-title">Mensaje enviado</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        
+        <div class="modal-body">
+        <p>Gracias por tu interes.
+        Nos comunicaremos con usted pronto.</p>
+        </div>
+        
+        <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+        Aceptar
+        </button>
+        </div>
+        
+        </div>
+        </div>
+        </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script>
+        // 'DOMContentLoaded' asegura que el código se ejecute SOLO cuando toda la página HTML ha cargado.
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // --- SECCIÓN DE CAPTURA DE ELEMENTOS HTML ---
+            // Aquí "atrapamos" los elementos del HTML por su ID o Clase para poder manipularlos.
+            const botonesReservar = document.querySelectorAll('.open-modal-btn'); // Todos los botones "Reservar"
+            const nombreHabitacionModal = document.getElementById('nombreHabitacionModal'); // El texto en el título del modal
+            
+            const pasoFecha = document.getElementById('pasoFecha'); // El div del Paso 1
+            const pasoDias = document.getElementById('pasoDias');   // El div del Paso 2
+            const pasoExito = document.getElementById('pasoExito'); // El div del Paso 3
+            
+            const fechaReserva = document.getElementById('fechaReserva'); // El input del calendario
+            const diasReserva = document.getElementById('diasReserva');   // El input de cantidad de días
+            const mensajeFinal = document.getElementById('mensajeFinal'); // El texto donde pondremos el éxito
+            
+            const btnAceptarFecha = document.getElementById('btnAceptarFecha');
+            const btnConfirmarReserva = document.getElementById('btnConfirmarReserva');
+    
+    
+            // --- FLUJO 1: AL ABRIR EL MODAL ---
+            // Le agregamos un "escuchador de eventos" (click) a cada botón de la tabla.
+            botonesReservar.forEach(boton => {
+                boton.addEventListener('click', function() {
+                    // Obtenemos el nombre de la habitación desde el atributo 'data-room' del botón que fue presionado
+                    const nombreHabitacion = this.getAttribute('data-room');
+                    // Colocamos ese nombre en el título del modal
+                    nombreHabitacionModal.textContent = nombreHabitacion;
+                    
+                    // Reiniciamos el formulario: Mostramos el Paso 1 y ocultamos los demás
+                    pasoFecha.style.display = 'block';
+                    pasoDias.style.display = 'none';
+                    pasoExito.style.display = 'none';
+                    
+                    // Limpiamos cualquier valor previo que el usuario haya escrito
+                    fechaReserva.value = '';
+                    diasReserva.value = '1';
+                });
+            });
+    
+    
+            // --- FLUJO 2: PASAR DE FECHA A DÍAS ---
+            btnAceptarFecha.addEventListener('click', function() {
+                // Validamos que el usuario realmente haya elegido una fecha
+                if (!fechaReserva.value) {
+                    alert("Por favor, seleccione una fecha del calendario.");
+                    return; // Si no hay fecha, detenemos la ejecución aquí.
+                }
+                // Si la fecha es válida, ocultamos el Paso 1 y mostramos el Paso 2
+                pasoFecha.style.display = 'none';
+                pasoDias.style.display = 'block';
+            });
+    
+    
+            // --- FLUJO 3: CONFIRMAR LA RESERVA ---
+            btnConfirmarReserva.addEventListener('click', function() {
+                // Convertimos el valor de texto a un número entero
+                const dias = parseInt(diasReserva.value);
+                
+                // Validación de seguridad: Asegurarnos de que los días estén entre 1 y 7
+                if (dias < 1 || dias > 7) {
+                    alert("El número de días debe estar entre 1 y 7.");
+                    return; // Detiene la ejecución si el número es inválido
+                }
+    
+                // Ocultamos el Paso 2 y mostramos el mensaje de éxito (Paso 3)
+                pasoDias.style.display = 'none';
+                pasoExito.style.display = 'block';
+                
+                // Imprimimos el mensaje final inyectando la fecha que eligió el usuario
+                mensajeFinal.textContent =  ` Reservación para el día ${fechaReserva.value} fue aceptada.`;
+            });
+        });
+    </script>
+
+    <script src="./assets/script.js"></script>
+
+</body>
+
+</html>
