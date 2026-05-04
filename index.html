@@ -8,6 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   
 
 </head>
@@ -15,51 +19,90 @@
 
 <body>
 
-    
+        <!--
+    ==== NAVBAR PRINCIPAL ====
+    navbar: componente de navegación de Bootstrap
+    navbar-expand-lg: el menú se expande en pantallas grandes (lg) y se colapsa en móviles
+    -->
 
     <nav class="navbar navbar-expand-lg">
+
+        <!-- container: centra y limita el ancho del contenido -->
         <div class="container">
-      
-          <!-- Logo / Nombre del sistema -->
-          <a class="navbar-brand fw-bold" href="#">🏨 HotelGestión</a>
-      
-          <!-- Botón hamburguesa (visible en móviles) -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-      
-          <!-- Menú colapsable -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <!-- ms-auto empuja el menú a la derecha -->
-      
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Inicio</a>
-              </li>
-      
-              <li class="nav-item">
-                <a class="nav-link" href="#">Habitaciones</a>
-              </li>
-      
-              <li class="nav-item">
-                <a class="nav-link" href="#">Reservas</a>
-              </li>
-            </ul>
-          </div>
+
+            <!--
+            Logo / Identidad del sitio
+            Contiene el logo que redirige al inicio
+            -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/icons/logo.png" alt="Logo">
+                </a>
+            </div>
+
+            <!--
+            Botón hamburguesa (menú móvil)
+            navbar-toggler: botón de Bootstrap para colapsar menú
+            data-bs-toggle="collapse": activa la funcionalidad collapse
+            data-bs-target="#navbarNav": apunta al ID del menú que se va a ocultar/mostrar
+            -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!--
+            Menú de navegación colapsable
+            collapse navbar-collapse: permite ocultar/mostrar el menú en responsive
+            id="navbarNav": referencia para el botón hamburguesa
+            -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <!--
+                navbar-nav: estilo base del menú de navegación
+                ms-auto: empuja los elementos del menú hacia la derecha
+                -->
+                <ul class="navbar-nav ms-auto">
+
+                    <!-- Item de menú -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Inicio</a>
+                    </li>
+
+                    <!-- Item de menú -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Nosotros</a>
+                    </li>
+
+                    <!-- Item de menú -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Reservas</a>
+                    </li>
+
+                </ul>
+            </div>
+
         </div>
+
     </nav>
 
     <!-- Hero -->
 
     <!-- 
-    
     container-fluid : significa que ocupara todo el ancho de pantalla
+    contenedorHover : Estilo propio en el css
+    contenedorTitle : Estilo propio en el css
     -->
 
-    <div class="container-fluid">
+    <div class="container-fluid contenedorHover">
 
-        <img src="./assets/imgs/heroImage.avif  " alt="" width="100%">
+        <div class="contenedorTitle">
 
+            <h1>Experimente una comodidad inigualable.</h1>
+            
+        </div>
+
+        <p>Haz que tu estancia sea inolvidable con la combinación perfecta de variedad y confort diseñada para una relajación total.</p>
+        
     </div>
 
 
@@ -130,8 +173,8 @@
                 <div class="card h-100" >
                     <img src="./assets/imgs/reception24Hrs.webp" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Excelente atencion al cliente</h5>
-                      <p class="card-text">Personal capacitado, totalmente atentos para ofrecerte una buena experiencia en el hotel.</p>
+                      <h5 class="card-title">Atencion las 24 horas</h5>
+                      <p class="card-text">Estamos disponibles en todo momento para atender tus necesidades y brindarte una estadía cómoda y segura.</p>
                       
                     </div>
                 </div>
@@ -142,15 +185,28 @@
 
 
 
-    <!-- tabla -->
+        <!--
+    ==== SECCIÓN: TABLA DE COMPARACIÓN DE HABITACIONES ====
+    container: centra el contenido y aplica márgenes verticales (mt-5 mb-5)
+    text-center: centra el título
+    table-responsive: permite scroll horizontal en pantallas pequeñas
+    table: estilos base de Bootstrap para tablas
+    align-middle: centra verticalmente el contenido de las celdas
+    -->
 
-    <div class="container mt-5 mb-5"> 
+    <div class="container mt-5 mb-5">
+
+        <!-- Título de la sección -->
         <div class="text-center">
             <h2 class="section-title">Comparativa de Habitaciones</h2>
         </div>
-    
-        <div class="table-responsive"> 
+
+        <!-- Contenedor responsive para la tabla -->
+        <div class="table-responsive">
+
             <table class="table table-chalet text-center align-middle">
+
+                <!-- Encabezado de la tabla -->
                 <thead>
                     <tr>
                         <th class="text-start">Tipo de Habitación</th>
@@ -161,83 +217,189 @@
                         <th>Acción</th>
                     </tr>
                 </thead>
+
+                <!-- Cuerpo de la tabla con los datos -->
                 <tbody>
+
+                    <!-- Fila: Habitación Estándar -->
                     <tr>
                         <td class="text-start room-name">Estándar</td>
                         <td>2 Personas</td>
                         <td>1 Queen</td>
                         <td>25 m²</td>
                         <td>s/ 108 x noche</td>
-                        <td><button class="btn-chalet open-modal-btn" data-bs-toggle="modal" data-bs-target="#modalReserva" data-room="Estándar">Reservar</button></td>
+                        <td>
+                            <button class="btn-chalet open-modal-btn"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalReserva"
+                                data-room="Estándar">
+                                Reservar
+                            </button>
+                        </td>
                     </tr>
+
+                    <!-- Fila: Deluxe -->
                     <tr>
                         <td class="text-start room-name">Deluxe Chalet</td>
                         <td>2 Personas</td>
                         <td>1 King + 1 Sofá</td>
                         <td>40 m²</td>
                         <td>s/ 216 x noche</td>
-                        <td><button class="btn-chalet open-modal-btn" data-bs-toggle="modal" data-bs-target="#modalReserva" data-room="Deluxe Chalet">Reservar</button></td>
+                        <td>
+                            <button class="btn-chalet open-modal-btn"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalReserva"
+                                data-room="Deluxe Chalet">
+                                Reservar
+                            </button>
+                        </td>
                     </tr>
 
+                    <!-- Fila: Familiar -->
                     <tr>
                         <td class="text-start room-name">Familiar</td>
                         <td>4 Personas</td>
                         <td>2 Queen + 1 Sofá</td>
                         <td>50 m²</td>
                         <td>s/ 440 x noche</td>
-                        <td><button class="btn-chalet open-modal-btn" data-bs-toggle="modal" data-bs-target="#modalReserva" data-room="Deluxe Chalet">Reservar</button></td>
+                        <td>
+                            <button class="btn-chalet open-modal-btn"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalReserva"
+                                data-room="Deluxe Chalet">
+                                Reservar
+                            </button>
+                        </td>
                     </tr>
 
+                    <!-- Fila: Suite Presidencial -->
                     <tr>
                         <td class="text-start room-name">Suite Presidencial</td>
                         <td>4 Personas</td>
-                        <td>2 King</td>
+                        <td>2 King + 1 sala</td>
                         <td>80 m²</td>
                         <td>s/ 800 x noche</td>
-                        <td><button class="btn-chalet open-modal-btn" data-bs-toggle="modal" data-bs-target="#modalReserva" data-room="Suite Presidencial">Reservar</button></td>
+                        <td>
+                            <button class="btn-chalet open-modal-btn"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalReserva"
+                                data-room="Suite Presidencial">
+                                Reservar
+                            </button>
+                        </td>
                     </tr>
 
                 </tbody>
             </table>
+
         </div>
     </div>
 
-    <!-- Modal de la tabla -->
+        <!--
+    ==== MODAL: RESERVA DE HABITACIÓN ====
+    modal: componente de Bootstrap para ventanas emergentes
+    fade: animación de aparición/desaparición
+    tabindex="-1": evita que el modal reciba foco al cargar
+    aria-hidden="true": accesibilidad (oculto por defecto)
+    -->
+
     <div class="modal fade" id="modalReserva" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered"> 
+
+        <!-- Centrado vertical del modal -->
+        <div class="modal-dialog modal-dialog-centered">
+
             <div class="modal-content">
-            
+
+                <!-- Encabezado del modal -->
                 <div class="modal-header modal-header-chalet">
-                    <h5 class="modal-title">Reservar <span id="nombreHabitacionModal"></span></h5>
+
+                    <!-- Título dinámico con el nombre de la habitación -->
+                    <h5 class="modal-title">
+                        Reservar <span id="nombreHabitacionModal"></span>
+                    </h5>
+
+                    <!-- Botón para cerrar el modal -->
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
                 </div>
-            
+
+                <!-- Cuerpo del modal -->
                 <div class="modal-body p-4">
-            
+
+                    <!--
+                    PASO 1: Selección de fecha
+                    input type="date": selector de fecha
+                    min / max: restringe el rango de fechas disponibles
+                    -->
                     <div id="pasoFecha">
-                        <label for="fechaReserva" class="form-label fw-bold">Seleccione la fecha de llegada:</label>
-                        <input type="date" id="fechaReserva" class="form-control mb-3" min="2026-04-12" max="2026-12-31">
-                        <button id="btnAceptarFecha" class="btn-chalet w-100">Aceptar Fecha</button> 
+
+                        <label for="fechaReserva" class="form-label fw-bold">
+                            Seleccione la fecha de llegada:
+                        </label>
+
+                        <input type="date"
+                            id="fechaReserva"
+                            class="form-control mb-3"
+                            min="2026-04-12"
+                            max="2026-12-31">
+
+                        <button id="btnAceptarFecha" class="btn-chalet w-100">
+                            Aceptar Fecha
+                        </button>
+
                     </div>
-    
+
+                    <!--
+                    PASO 2: Selección de días de estadía
+                    inicialmente oculto (display: none)
+                    -->
                     <div id="pasoDias" style="display: none;">
-                        <label for="diasReserva" class="form-label fw-bold">¿Cuántos días se hospedará?</label>
-                        <input type="number" id="diasReserva" class="form-control mb-3" min="1" max="7" value="1">
-                        <small class="text-muted d-block mb-3">Máximo 7 días permitidos.</small>
-                        <button id="btnConfirmarReserva" class="btn-chalet w-100">Confirmar Reserva</button>
+
+                        <label for="diasReserva" class="form-label fw-bold">
+                            ¿Cuántos días se hospedará?
+                        </label>
+
+                        <input type="number"
+                            id="diasReserva"
+                            class="form-control mb-3"
+                            min="1"
+                            max="7"
+                            value="1">
+
+                        <small class="text-muted d-block mb-3">
+                            Máximo 7 días permitidos.
+                        </small>
+
+                        <button id="btnConfirmarReserva" class="btn-chalet w-100">
+                            Confirmar Reserva
+                        </button>
+
                     </div>
-    
+
+                    <!--
+                    PASO 3: Mensaje de éxito
+                    se muestra al finalizar la reserva
+                    -->
                     <div id="pasoExito" style="display: none;" class="text-center py-3">
-                        
-                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="var(--chalet-brown)" class="bi bi-check-circle mb-3" viewBox="0 0 16 16">
+
+                        <!-- Ícono de confirmación -->
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            width="50"
+                            height="50"
+                            fill="var(--chalet-brown)"
+                            class="bi bi-check-circle mb-3"
+                            viewBox="0 0 16 16">
+
                             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
                             <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+
                         </svg>
 
+                        <!-- Mensaje final dinámico -->
                         <h5 id="mensajeFinal" style="color: var(--chalet-brown);"></h5>
 
                     </div>
-    
+
                 </div>
             </div>
         </div>
@@ -247,10 +409,15 @@
 
     <!-- 
     ==== Uso de img-fluid ====
+    container : ofrece un ancho adaptable,según el tamaño de la pantalla 
     -->
 
     <div class="container">
 
+        <!-- 
+        text-center : alinea elementos y textos en el centro
+        mt-3 : equivalente a margint top
+          -->
         <h3 class="text-center mt-3">Algunas de nuestras habitaciones</h3>
 
 
@@ -373,236 +540,313 @@
     </div>
 
 
-    <!-- Codigo erick -->
+    
 
+        <!--
+    ==== SECCIÓN: FORMULARIO DE CONTACTO / RESERVA ====
+    container: centra el contenido y aplica márgenes verticales (my-5)
+    shadow: agrega sombra al contenedor
+    rounded: bordes redondeados
+    overflow-hidden: evita que elementos internos sobresalgan del contenedor
+    -->
 
     <div class="container my-5 shadow rounded overflow-hidden">
 
-        <div class="row g-0">
-        
-        <!-- Lado izquierdo -->
-        <div class="col-md-4 info text-white p-4">
-        
-        <h2 class="fw-bold text-uppercase mb-4">
-        Nuestros <br> Horarios
-        </h2>
-        
-        <p class="text-warning fw-bold mt-3">LUNES - JUEVES</p>
-        <p class="mb-1">07:00 - 15:00</p>
-        <p class="mb-3">16:00 - 22:00</p>
-        
-        <p class="text-warning fw-bold">VIERNES - DOMINGO</p>
-        <p class="mb-1">07:00 - 15:00</p>
-        <p class="mb-3">16:00 - 22:00</p>
-        
-        <h4 class="mt-4 fw-bold text-white">
-        +51 987 654 321
-        </h4>
-        
-        </div>
-        
-        <!-- Formulario -->
-        <div class="col-md-8 bg-white p-5">
-        
-        <h4 class="text-center text-secondary mb-2">
-        CONTACTANOS !!!
-        </h4>
-        
-        <h1 class="text-center mb-4">
-        Reserva tu habitación
-        </h1>
-        
-        <form id="formulario" class="needs-validation" novalidate>
-        
-        <div class="mb-3">
+        <div class="row justify-content-center">
 
-                <input 
-            class="form-control mb-3 rounded shadow-sm"
-            type="text" 
-            placeholder="Nombre" 
-            id="nombre"
-            pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]+" 
-            required>
-            
-            <div class="invalid-feedback">
-            Complete este campo (solo letras)
+            <!--
+            Columna del formulario
+            col-12: ocupa todo el ancho en móviles
+            col-md-10: reduce ancho en tablets
+            col-lg-8: centra y limita el formulario en pantallas grandes
+            bg-white: fondo blanco
+            p-5: padding interno grande
+            -->
+            <div class="col-12 col-md-10 col-lg-8 bg-white p-5">
+
+                <!-- Títulos de la sección -->
+                <h4 class="text-center text-secondary mb-2">
+                    CONTACTANOS !!!
+                </h4>
+
+                <h1 class="text-center mb-4">
+                    Reserva tu habitación
+                </h1>
+
+                <!--
+                Formulario de reserva
+                needs-validation: activa validación de Bootstrap
+                novalidate: desactiva validación nativa del navegador
+                -->
+                <form id="formulario" class="needs-validation" novalidate>
+
+                    <!-- Campo: Nombre -->
+                    <div class="mb-3">
+
+                        <input
+                            class="form-control mb-3 rounded shadow-sm"
+                            type="text"
+                            placeholder="Nombre"
+                            id="nombre"
+                            pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]+"
+                            required>
+
+                        <div class="invalid-feedback">
+                            Complete este campo (solo letras)
+                        </div>
+
+                    </div>
+
+                    <!-- Campo: Apellido -->
+                    <div class="mb-3">
+
+                        <input
+                            class="form-control mb-3 rounded shadow-sm"
+                            type="text"
+                            placeholder="Apellido"
+                            id="apellido"
+                            pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]+"
+                            required>
+
+                        <div class="invalid-feedback">
+                            Complete este campo (solo letras)
+                        </div>
+
+                    </div>
+
+                    <!-- Campo: Email -->
+                    <div class="mb-3">
+
+                        <input
+                            class="form-control mb-3 rounded shadow-sm"
+                            type="email"
+                            placeholder="Email"
+                            id="correo"
+                            required>
+
+                        <div class="invalid-feedback">
+                            Ingrese un correo válido
+                        </div>
+
+                    </div>
+
+                    <!-- Campo: Teléfono -->
+                    <div class="mb-3">
+
+                        <input
+                            class="form-control mb-3 rounded shadow-sm"
+                            type="tel"
+                            placeholder="Teléfono"
+                            id="telefono"
+                            pattern="[0-9+ ]{9,15}"
+                            required>
+
+                        <div class="invalid-feedback">
+                            Solo números
+                        </div>
+
+                    </div>
+
+                    <!-- Campo: Mensaje opcional -->
+                    <textarea
+                        class="form-control mb-3 rounded shadow-sm"
+                        placeholder="Mensaje (Opcional)"
+                        id="mensaje">
+                    </textarea>
+
+                    <!-- Botón de envío -->
+                    <button
+                        class="btn btn-dark w-100 p-3 rounded shadow"
+                        type="submit">
+                        Enviar Reserva
+                    </button>
+
+                </form>
+
             </div>
 
-
         </div>
 
-        
-        <div class="mb-3">
-            <input 
-            class="form-control mb-3 rounded shadow-sm"
-            type="text" 
-            placeholder="Apellido" 
-            id="apellido"
-            pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]+" 
-            required
-            >
-            
-            <div class="invalid-feedback">
-            Complete este campo (solo letras)
-            </div>
-        </div>
-        
-        <div class="mb-3">
-            <input 
-            class="form-control mb-3 rounded shadow-sm"
-            type="email" 
-            placeholder="Email" 
-            id="correo" 
-            required>
-            
-            <div class="invalid-feedback">
-            Ingrese un correo válido
-            </div>
-        </div>
-        
-        <div class="mb-3">
-            <input 
-            class="form-control mb-3 rounded shadow-sm"
-            placeholder="Teléfono" 
-            type="tel" 
-            id="telefono"
-            class="form-control"
-            pattern="[0-9+ ]{9,15}" 
-            required
-            >
-            
-            <div class="invalid-feedback">
-            Solo números
-            </div>
-        </div>
-
-        
-        
-        <textarea 
-        class="form-control mb-3 rounded shadow-sm"
-        placeholder="Mensaje (Opcional)"
-        id="mensaje">
-        </textarea>
-        
-        <button 
-        class="btn btn-dark w-100 p-3 rounded shadow"
-        type="submit">
-        Enviar Reserva
-        </button>
-        
-        </form>
-        
-        </div>
-        
-        </div>
-        
-        </div>
+    </div>
         
         <!-- Modal -->
-        <div class="modal fade" id="modalFormulario" tabindex="-1">
+        <!--
+==== MODAL: CONFIRMACIÓN DE ENVÍO DE FORMULARIO ====
+modal: componente de Bootstrap para mostrar mensajes emergentes
+fade: animación de aparición/desaparición del modal
+tabindex="-1": evita foco automático del modal al cargar
+-->
+
+    <div class="modal fade" id="modalFormulario" tabindex="-1">
+
+        <!-- Contenedor del modal centrado por defecto -->
         <div class="modal-dialog">
-        <div class="modal-content">
-        
-        <div class="modal-header">
-        <h5 class="modal-title">Mensaje enviado</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+
+            <div class="modal-content">
+
+                <!-- Encabezado del modal -->
+                <div class="modal-header">
+
+                    <!-- Título del mensaje -->
+                    <h5 style="color: white;"  class="modal-title">Mensaje enviado</h5>
+
+                    <!-- Botón para cerrar el modal -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+
+                </div>
+
+                <!-- Cuerpo del modal -->
+                <div class="modal-body">
+
+                    <!-- Mensaje de confirmación -->
+                    <p>
+                        Gracias por tu interes.
+                        Nos comunicaremos con usted pronto.
+                    </p>
+
+                </div>
+
+                <!-- Pie del modal -->
+                <div class="modal-footer">
+
+                    <!-- Botón de confirmación/cierre -->
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                        Aceptar
+                    </button>
+
+                </div>
+
+            </div>
+
         </div>
-        
-        <div class="modal-body">
-        <p>Gracias por tu interes.
-        Nos comunicaremos con usted pronto.</p>
+
+    </div>
+
+
+
+            <!--
+    ==== FOOTER PRINCIPAL ====
+    footer: sección inferior del sitio con información de contacto y enlaces
+    text-white: texto en color blanco
+    pt-5 pb-3: padding superior e inferior
+    footer: clase personalizada para estilos adicionales
+    -->
+
+    <footer class="text-white pt-5 pb-3 footer">
+
+        <div class="container">
+
+            <!--
+            row: organiza el contenido en columnas
+            align-items-center: alinea verticalmente los elementos
+            text-center text-md-start: centra en móvil y alinea a la izquierda en pantallas medianas+
+            -->
+            <div class="row align-items-center text-center text-md-start">
+
+                <!--
+                COLUMNA 1: DIRECCIÓN
+                col-md-4: ocupa 1/3 del ancho en pantallas medianas+
+                -->
+                <div class="col-md-4 mb-4 mb-md-0">
+
+                    <h6 class="fw-bold">Direccion</h6>
+
+                    <!-- Dirección con ícono -->
+                    <div class="d-flex align-items-start justify-content-center justify-content-md-start gap-2">
+
+                        <img src="assets/icons/map-icon.png" alt="Ubicación" width="15" height="20">
+
+                        <p class="mb-0">
+                            Av. El Sol 175 San Juan de Lurigancho
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!--
+                COLUMNA 2: LOGO + REDES SOCIALES
+                -->
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+
+                    <!-- Logo del sitio -->
+                    <div class="mb-3">
+
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="assets/icons/logo.png" alt="Logo">
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Íconos de redes sociales -->
+                    <div class="d-flex justify-content-center gap-3">
+
+                        <a href="#">
+                            <img src="./assets/icons/fb-icon.png" alt="Facebook" width="30" height="30">
+                        </a>
+
+                        <a href="#">
+                            <img src="./assets/icons/twitter-icon.png" alt="Twitter" width="30" height="30">
+                        </a>
+
+                        <a href="#">
+                            <img src="./assets/icons/instagram-icon.png" alt="Instagram" width="30" height="30">
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!--
+                COLUMNA 3: CONTACTO
+                text-md-end: alinea a la derecha en pantallas medianas+
+                -->
+                <div class="col-md-4 text-md-end text-center">
+
+                    <h6 class="fw-bold">Contactanos</h6>
+
+                    <!-- Teléfono -->
+                    <div class="d-flex align-items-center justify-content-center justify-content-md-end gap-2 mb-2">
+
+                        <img src="assets/icons/call-icon.png" alt="Teléfono" width="18" height="18">
+
+                        <p class="mb-0">+51 995 567 896</p>
+
+                    </div>
+
+                    <!-- Email -->
+                    <div class="d-flex align-items-center justify-content-center justify-content-md-end gap-2">
+
+                        <img src="assets/icons/mail-icon.png" alt="Email" width="18" height="18">
+
+                        <p class="mb-0">royal_sayariy_hotel@hotmail.com</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Separador horizontal -->
+            <hr class="border-light my-4">
+
+            <!-- Parte inferior del footer -->
+            <div class="text-center small">
+                <p class="mb-0">© Creado por Grupo 14 - V 1.0.0</p>
+            </div>
+
         </div>
-        
-        <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
-        Aceptar
-        </button>
-        </div>
-        
-        </div>
-        </div>
-        </div>
+
+    </footer>
+
+       
 
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
-    <script>
-        // 'DOMContentLoaded' asegura que el código se ejecute SOLO cuando toda la página HTML ha cargado.
-        document.addEventListener('DOMContentLoaded', function() {
-            
-            // --- SECCIÓN DE CAPTURA DE ELEMENTOS HTML ---
-            // Aquí "atrapamos" los elementos del HTML por su ID o Clase para poder manipularlos.
-            const botonesReservar = document.querySelectorAll('.open-modal-btn'); // Todos los botones "Reservar"
-            const nombreHabitacionModal = document.getElementById('nombreHabitacionModal'); // El texto en el título del modal
-            
-            const pasoFecha = document.getElementById('pasoFecha'); // El div del Paso 1
-            const pasoDias = document.getElementById('pasoDias');   // El div del Paso 2
-            const pasoExito = document.getElementById('pasoExito'); // El div del Paso 3
-            
-            const fechaReserva = document.getElementById('fechaReserva'); // El input del calendario
-            const diasReserva = document.getElementById('diasReserva');   // El input de cantidad de días
-            const mensajeFinal = document.getElementById('mensajeFinal'); // El texto donde pondremos el éxito
-            
-            const btnAceptarFecha = document.getElementById('btnAceptarFecha');
-            const btnConfirmarReserva = document.getElementById('btnConfirmarReserva');
-    
-    
-            // --- FLUJO 1: AL ABRIR EL MODAL ---
-            // Le agregamos un "escuchador de eventos" (click) a cada botón de la tabla.
-            botonesReservar.forEach(boton => {
-                boton.addEventListener('click', function() {
-                    // Obtenemos el nombre de la habitación desde el atributo 'data-room' del botón que fue presionado
-                    const nombreHabitacion = this.getAttribute('data-room');
-                    // Colocamos ese nombre en el título del modal
-                    nombreHabitacionModal.textContent = nombreHabitacion;
-                    
-                    // Reiniciamos el formulario: Mostramos el Paso 1 y ocultamos los demás
-                    pasoFecha.style.display = 'block';
-                    pasoDias.style.display = 'none';
-                    pasoExito.style.display = 'none';
-                    
-                    // Limpiamos cualquier valor previo que el usuario haya escrito
-                    fechaReserva.value = '';
-                    diasReserva.value = '1';
-                });
-            });
-    
-    
-            // --- FLUJO 2: PASAR DE FECHA A DÍAS ---
-            btnAceptarFecha.addEventListener('click', function() {
-                // Validamos que el usuario realmente haya elegido una fecha
-                if (!fechaReserva.value) {
-                    alert("Por favor, seleccione una fecha del calendario.");
-                    return; // Si no hay fecha, detenemos la ejecución aquí.
-                }
-                // Si la fecha es válida, ocultamos el Paso 1 y mostramos el Paso 2
-                pasoFecha.style.display = 'none';
-                pasoDias.style.display = 'block';
-            });
-    
-    
-            // --- FLUJO 3: CONFIRMAR LA RESERVA ---
-            btnConfirmarReserva.addEventListener('click', function() {
-                // Convertimos el valor de texto a un número entero
-                const dias = parseInt(diasReserva.value);
-                
-                // Validación de seguridad: Asegurarnos de que los días estén entre 1 y 7
-                if (dias < 1 || dias > 7) {
-                    alert("El número de días debe estar entre 1 y 7.");
-                    return; // Detiene la ejecución si el número es inválido
-                }
-    
-                // Ocultamos el Paso 2 y mostramos el mensaje de éxito (Paso 3)
-                pasoDias.style.display = 'none';
-                pasoExito.style.display = 'block';
-                
-                // Imprimimos el mensaje final inyectando la fecha que eligió el usuario
-                mensajeFinal.textContent =  ` Reservación para el día ${fechaReserva.value} fue aceptada.`;
-            });
-        });
-    </script>
-
-    <script src="./assets/script.js"></script>
+    <script src="./Javascript/script.js"></script>
 
 </body>
 
